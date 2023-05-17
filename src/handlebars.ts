@@ -15,6 +15,10 @@ Handlebars.registerHelper("quote", (value: string): string => {
   return lines.join("\n");
 });
 
+Handlebars.registerHelper("firstLine", (value: string): string => {
+  return value.split("\n")[0];
+});
+
 Handlebars.registerHelper(
   "date",
   (format: string | { [key: string]: string }): string => {
