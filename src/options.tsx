@@ -805,6 +805,10 @@ const Options = () => {
               filename.
             </li>
             <li>
+              <code>&#123;&#123;filenameFirstLine FIELD&#125;&#125;</code>: First line of text 
+              and strips any characters from <code>FIELD</code> that are not safe in a filename.
+            </li>
+            <li>
               <code>&#123;&#123;json FIELD&#125;&#125;</code>: Encodes value in{" "}
               <code>FIELD</code> as a JSON string.
             </li>
