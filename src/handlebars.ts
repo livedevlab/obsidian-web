@@ -38,6 +38,13 @@ Handlebars.registerHelper("filename", (unsafe: string | undefined): string => {
   return "";
 });
 
+Handlebars.registerHelper("filenameFirstLine", (unsafe: string | undefined): string => {
+  if (typeof unsafe === "string") {
+    return unsafe.split("\n")[0].replace(/[/\\?%*:|"<>]/g, "");
+  }
+  return "";
+});
+
 Handlebars.registerHelper("json", (unsafe: string | undefined): string => {
   if (typeof unsafe === "string") {
     return JSON.stringify(unsafe);
